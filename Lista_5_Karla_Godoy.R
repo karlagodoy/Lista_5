@@ -4,7 +4,7 @@
 
 # Respostas da lista 1----
 
-# QuestÃ£o 5----
+# Questao 5----
 
 require(tidyverse)
 require(magrittr)
@@ -34,7 +34,7 @@ class (Tamanho) #character
 
 # B----
 
-#Empresas do setor do ComÃ©rcio 
+#Empresas do setor do Comercio 
 
 Q5Comercio <- Q_5 %>% filter(Setor=="C")
 
@@ -44,7 +44,7 @@ mean (Q5Comercio$Meses) #7.142857
 
 median(Q5Comercio$Meses) #8
 
-#Empresas do setor da IndÃºstria
+#Empresas do setor da Industria
 
 Q5Industria <- Q_5 %>% filter(Setor=="I")
 
@@ -52,7 +52,7 @@ mean (Q5Industria$Meses) #4.625
 
 median(Q5Industria$Meses) #4.5
 
-# as empresas do Comercio apresentam mÃ©dia de meses em crescimento maior que as empresas na  Ã¡rea de Industria.
+# as empresas do Comercio apresentam media de meses em crescimento maior que as empresas na  area de Industria.
 
 # C----
 
@@ -64,7 +64,7 @@ sd(Q5Comercio$Meses) #1.46385
 
 sd(Q5Industria$Meses) #1.06066
 
-#O grupo mais homogÃªneo Ã© o grupo formado pelas empresas do ramo da Industria.
+#O grupo mais homogeneo Ã© o grupo formado pelas empresas do ramo da Industria.
 
 # D----
 
@@ -72,8 +72,8 @@ summary (Q_5$Meses)
 
 #  Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
 #  3.0     4.5     6.0     5.8     7.0     9.0 
-# A medida descritiva que fornece a informaÃ§Ã£o Ã© o 1Âº P-  quantil (1st Qu).
-# O nÃºmero de meses apresentando crescimento de no mÃ¡ximo 4,5.
+# A medida descritiva que fornece a informacao e o 1 P-  quantil (1st Qu).
+# O numero de meses apresentando crescimento de no maximo 4,5.
 
 
 # E----
@@ -113,7 +113,7 @@ sd(Q5EmpresasG$Meses) #2.309401
 #com crescimento. Os tempos médios e medianos são bastante
 #semelhantes nos 3 grupos.
 
-#6----
+#Questao6----
 
 Cidade <-  c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
 
@@ -147,7 +147,7 @@ mean(Q_6$Investimento)+ 2*sd(Q_6$Investimento) #25.56926
 ## tem um investimento muito superior e sua retirada faz com que a média caia . 
 
 
-#7 ----
+# Questao7 ----
 
 Ind<-  c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 
@@ -160,7 +160,7 @@ Q_7 <- data.frame (A, B)
 
 #A
 
-# EstÃ­mulo A
+# Estimulo A
 
 mean (Q_7$A) #16.85
 
@@ -170,7 +170,7 @@ var(Q_7$A) # 190.5553
 
 sd(Q_7$A) #13.80418
 
-# EstÃ­mulo B
+# Estimulo B
 
 mean (B) #10.15789
 
@@ -180,8 +180,8 @@ var(B) # 89.47368
 
 sd(B) #9.459053
 
-## O estÃ­mulo B tem o tempo o menor tempo de reaÃ§Ã£o, tem mÃ©dia 
-## e mediana menor que o estÃ­mulo A, e ainda apresenta uma amostra mais homogÃªnea. 
+## O estimulo B tem o tempo o menor tempo de reacao, tem media 
+## e mediana menor que o estimulo A, e ainda apresenta uma amostra mais homogenea. 
 
 #B
 
@@ -189,7 +189,7 @@ require(ggplot2)
 boxplot(Q_7)
 
 
-#8----
+#Questao8----
 
 fam <- c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J")
 
@@ -220,7 +220,7 @@ sd(Q_8$saude_perc) #0.6570134
 
 cov(Q_8) #  -9.533333 
 
-#CorrelaÃ§Ã£o
+#Correlacao
 
 cor.test(Q_8$renda_sm, Q_8$saude_perc)
 
@@ -234,7 +234,7 @@ cor.test(Q_8$renda_sm, Q_8$saude_perc)
 ## percentual de gasto com saúde diminui. 
 
 
-#9----
+#Questao 9----
 
 aluno <- c("A", "B", "C", "D", "E", "F", "G","H", "I")
 
@@ -258,7 +258,7 @@ cor.test(Q_9$P1, Q_9$P2)
 
 # Lista 2----
 
-#QuestÃ£o5----
+# Questao5----
 
 # 1000 eleitores 
 # 620 jamais votariam no candidato (sucesso=1)
@@ -288,7 +288,7 @@ t.test(votos)
 ## calculado apresenta o valor da média populacional.
 
 
-# QuestÃ£o 6----
+# Questao 6----
 
 #A
 
@@ -329,7 +329,7 @@ Oy<- (0.4156389/sqrt(2401))
 
 #[0.204975-0.2389047] existe 95% de confiança de que o intervalo calculado possui a média populacional.
 
-#QuestÃ£o11
+# Questao11
 
 #A 
 # H0: Não há associação entre a ideologia da legenda partidária e o posicionamento 
@@ -362,7 +362,7 @@ chisq.test(tabela_Q11, correct= FALSE)
 # Neste caso o Quadrado é 242.42,Para df=  1 e p-valor igual a 0,05, temos x²= 3,481 e  que 3,841<242,42. 
 # Desta forma podemos rejeitar a hipótese nula.
 
-#QuestÃ£o 12
+# Questao 12
 
 Year_Q12 <- c(1964,1966,1968,1970,1972,1974,1976,1978,1980,1982,1984,1986,1988,1990,1992,1994,1996,1998,2000,2002,2004,2006)
 
@@ -390,7 +390,7 @@ t.test(Antes$House,Depois$House)
 
 # Os dois testes tiveram P- valor maior que 0,05. Desta forma, não  podemos rejeitar a hipótese nula.
 
-#QuestÃ£o 13
+# Questao 13
 
 year <- c(1876, 1880,1884,1888,1892,1896,1900,1904,1908,1912,1916,1920,1924,1928,1932)
 
@@ -413,9 +413,9 @@ cor.test(Questao_13$growth,Questao_13$vote)
 # t = 2.2546, df = 13, p-value = 0.04205
 # alternative hypothesis: true correlation is not equal to 0
 # 95 percent confidence interval:
-  # 0.02461898 0.81980079
+# 0.02461898 0.81980079
 # sample estimates:
- # cor 
+# cor 
 # 0.5301953 
 # podemos rejeitar a hipótese nula ao pvalorde 0,05 
 # e assim concluir que mesmo no período mais restrito já era possívelidentificar correlação entre as variáveis.
